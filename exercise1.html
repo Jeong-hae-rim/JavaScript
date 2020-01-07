@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>구구단 구현</h1>
+<hr>
+<pre> 
+<script>
+for (;;) {
+	var num = window.prompt("1 부터 9사이의 숫자를 한 개 입력해주세요.");
+	if (isNaN(num) || num == '') {
+		document.writeln("숫자를 입력해 주세요!!!");
+		document.writeln(num+"단입니다.");
+		document.writeln("<hr>");
+	} else {
+		for(var i=1; i<10; i++){
+		document.writeln(num+"X"+i+"="+i*num);
+		}
+		break;
+	}
+}
+</script>
+</pre>
+</body>
+</html>
