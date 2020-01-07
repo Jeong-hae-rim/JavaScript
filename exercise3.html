@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>배열</h1>
+<script>
+var ary = [10, 5, 7, 21, 4, 8, 18];
+var sum = 0;
+
+for(var i=0; i<ary.length;i++){
+	sum += ary[i];
+}
+document.writeln("<h1>"+ sum +"</h1>");
+
+var max = 0;
+for(var i = 0; i < ary.length; i++) {
+    if(max < ary[i]) {
+        max = ary[i];
+    }
+}
+document.writeln("-최대값:"+ max+"<br>");
+
+var min = 100;
+for(var i = 0; i < ary.length; i++) {
+    if(min > ary[i]) {
+        min = ary[i];
+    }
+}
+document.writeln("-최소값:"+ min+"<br>");
+
+</script>
+</body>
+</html>
