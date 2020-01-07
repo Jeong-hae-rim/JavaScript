@@ -9,18 +9,20 @@
 <hr>
 <pre> 
 <script>
-for (;;) {
+while (true) {
 	var num = window.prompt("1 부터 9사이의 숫자를 한 개 입력해주세요.");
-	if (isNaN(num) || num == '') {
-		document.writeln("숫자를 입력해 주세요!!!");
-		document.writeln(num+"단입니다.");
-		document.writeln("<hr>");
-	} else {
-		for(var i=1; i<10; i++){
+		if(isNaN(num) || num == '' || num == null || num < 1 || num > 9){
+			
+			document.writeln("<span>1 부터 9사이의 숫자를 한 개 입력해주세요!</span>");
+		} 
+        else{
+        document.writeln(num+"단입니다.");
+    	document.writeln("<hr>");
+        for(var i = 1; i <= 9; i++){
 		document.writeln(num+"X"+i+"="+i*num);
 		}
-		break;
 	}
+		break;
 }
 </script>
 </pre>
