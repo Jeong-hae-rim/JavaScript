@@ -5,25 +5,21 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>구구단 구현</h1>
-<hr>
-<pre> 
+	<h1>구구단 구현</h1>
+	<hr>
+	<pre> 
 <script>
 while (true) {
-	var num = window.prompt("1 부터 9사이의 숫자를 한 개 입력해주세요.");
-		if(isNaN(num) || num == '' || num == null || num < 1 || num > 9){
-			
-			window.prompt("1 부터 9사이의 숫자를 한 개 입력해주세요!");
-		} 
-        else{
-        document.writeln(num+"단입니다.");
-    	document.writeln("<hr>");
-        for(var i = 1; i <= 9; i++){
-		document.writeln(num+"X"+i+"="+i*num);
-		}
-	}
-		break;
+	var num=window.prompt("1~9사이의 숫자를 입력해주세요.");
+	if(isNaN(num) || num <1 || num>9 || num == '' || num == null)	{
+	continue;
+}else {
+	document.writeln("<h1>"+num+"단 입니다."+"</h1>"+"<hr>");
+	for(var i=1;i<10;i++){
+	document.writeln(num+"X"+i+"="+num*i+"<br>");	
+	}break;
 }
+}		
 </script>
 </pre>
 </body>
