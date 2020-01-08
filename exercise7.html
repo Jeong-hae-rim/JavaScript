@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>함수 구현</h1>
+<hr>
+<script>
+
+function printH1(content){
+	document.write("<h1>"+content+"</h1>");
+}
+function printH4(content){
+	document.write("<h4>"+content+"</h4>");
+}
+
+function apply (ary, func){
+	if(ary==null||func==null){
+		console.log("아규먼트 오류");
+		return false;
+	}
+	else if(!Array.isArray(ary)||typeof func != "function"){
+		console.log("아규먼트 오류");
+		return false;
+	}
+	else{
+		for(var i in ary){
+			func(ary[i]);
+		}
+		return true;
+		
+	}
+	
+}
+
+var ary = [ ];
+while(true){
+	var str = window.prompt("데이터를 입력해주세요.");
+	if(str==null){
+		break;
+	}
+	ary.push(str);
+}
+
+var d = new Date();
+var n = d.getDay();
+
+if(n==1||n==3||n==5){
+	var t = apply(ary,printH1);
+}
+else if (n==2||n==4){
+	var t = apply(ary,printH4);
+}
+else if (n==0){
+	var t = apply('ㅋㅋㅋ',printH1);
+}
+else{
+	var t = apply(ary);
+}
+
+if(t){
+	 window.alert("성공");
+}
+else{
+	 window.alert("실패");
+}
+</script>
+</body>
+</html>
