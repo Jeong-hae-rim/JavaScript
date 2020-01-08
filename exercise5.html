@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>함수 구하기</h1>
+<hr>
+<pre>
+<script>
+function sum (p1) {
+	var sum = 0;
+	if(p1==null){
+		return;
+	}
+	else {
+		for(var i=1;i<=p1;i++){
+			sum += i;
+		}
+		return;
+	}
+	
+}
+
+var num = Math.floor(Math.random()*6);
+var result = 0;
+if(num==0){
+	result = sum();
+} else {
+	result = sum(num);
+}
+
+if(!result){
+	document.writeln("호출 결과값 :" + sum(num)+"<br>");
+} else{
+	document.writeln("결과값이 없어요!!" + "<br>");
+}
+
+</script>
+</pre>
+</body>
+</html>
