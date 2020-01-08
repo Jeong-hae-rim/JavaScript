@@ -19,6 +19,7 @@ function calc(){
 		for(var i in arguments){
 			if(isNaN(arguments[i])){
 				result = "숫자만 전달하세요.";
+				break;
 			}
 			else
 				result += parseInt(arguments[i]);

@@ -18,7 +18,8 @@ function sum (p1) {
 		for(var i=1;i<=p1;i++){
 			sum += i;
 		}
-		return;
+		
+		return sum;
 	}
 	
 }
@@ -31,8 +32,8 @@ if(num==0){
 	result = sum(num);
 }
 
-if(!result){
-	document.writeln("호출 결과값 :" + sum(num)+"<br>");
+if(result){
+	document.writeln("호출 결과값 :" + result+"<br>");
 } else{
 	document.writeln("결과값이 없어요!!" + "<br>");
 }
