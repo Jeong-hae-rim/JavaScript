@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript학습</title>
+</head>
+<body>
+
+<script src="util.js"></script>
+<script>
+
+    function printObject(p){
+        if(typeof p == 'object'){
+            writeColor(p.msg, p.tag, p.color);
+        }
+        return;
+    }
+
+    var obj1 = {
+        tag : 'h1',
+        color : '#F7CAC9',
+        msg : "h1출력"
+    }
+    var obj2 = {
+        tag : 'h2',
+        color : '#F7786B',
+        msg : "h2출력"
+    }
+    var obj3 = {
+        tag : 'h3',
+        color : '#91A8D0',
+        msg : "h3출력"
+    }
+    var obj4 = {
+        tag : 'h4',
+        color : '#034F84',
+        msg : "h4출력"
+    }
+    var obj5 = {
+        tag : 'h5',
+        color : '#98DDDE',
+        msg : "h5출력"
+    }
+
+    printObject(obj1);
+    printObject(obj2);
+    printObject(obj3);
+    printObject(obj4);
+    printObject(obj5);
+</script>
+</body>
+</html>

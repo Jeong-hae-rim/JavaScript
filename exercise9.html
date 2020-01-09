@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript학습</title>
+</head>
+<body>
+
+<script src="util.js"></script>
+<script>
+     function DayInfo(name, year, month, date){
+          this.name = name;
+          this.year = parseInt(year);
+          this.month = parseInt(month);
+          this.date = parseInt(date);
+     }
+
+     DayInfo.prototype.getTotalDays =  function(){
+          var diff = new Date() - new Date(this.year, this.month-1, this.date);
+          var fromBirthday = Math.ceil(diff / 86400000);
+          return this.name + "님은 태어난지 "+fromBirthday+"일 되었어요.";
+     };
+     DayInfo.prototype.getKorDay = function(){
+          var d = new Date(this.year, this.month-1, this.date).getDay();
+          var dayToKor = ['일','월','화','수','목','금','토'];
+          return this.name + "님은 "+dayToKor[d]+"요일에 태어났어요.";
+     };
+
+     var obj1 = new DayInfo('민규', 1997, 4, 6);
+     var obj2 = new DayInfo('정한', 1995,10,4);
+     var obj3 = new DayInfo('도겸', 1997,2,18);
+
+     writeColor(obj1.getTotalDays(), "h3", "#F7CAC9");
+     writeColor(obj2.getTotalDays(), "h3", "#F7CAC9");
+     writeColor(obj3.getTotalDays(), "h3", "#F7CAC9");
+     writeColor(obj1.getKorDay(), "h3", "#91A8D0");
+     writeColor(obj2.getKorDay(), "h3", "#91A8D0");
+     writeColor(obj3.getKorDay(), "h3", "#91A8D0");
+</script>
+</body>
+</html>
