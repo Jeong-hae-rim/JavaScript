@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>시간정보 출력하기 3</h1>
+	<hr>
+	<h2></h2>
+
+	<button>빨강색</button>
+	<button>초록색</button>
+	<button>파란색</button>
+
+	<script>
+		var dom = document.getElementsByTagName("h2")[0];
+		var d = new Date();
+		dom.innerHTML = "오늘은 " + d.getFullYear() + "년 " + (d.getMonth() + 1)
+				+ "월 " + d.getDate() + "일 입니다.";
+	
+	var but1 = document.getElementsByTagName("button")[0];
+	var but2 = document.getElementsByTagName("button")[1];
+	var but3 = document.getElementsByTagName("button")[2];
+	
+	but1.addEventListener("click", function () {dom.style.color = "red";});
+	but2.addEventListener("click", function () {dom.style.color = "green";});
+	but3.addEventListener("click", function () {dom.style.color = "blue";});
+	</script>
+</body>
+</html>

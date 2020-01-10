@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script src="util.js"></script>
+<h1>자바스크립트 출력 구현하기</h1>
+<hr>
+<h2 id = 'i'>오늘은 불금</h2>
+<script type="text/javascript">
+
+var dom = document.getElementsByTagName("h2");
+dom = document.getElementById("i");
+window.setTimeout(function() {
+	setId = window.setInterval(function(){
+		var d = new Date();
+		dom.innerHTML = "<h2>"+d.toLocaleString()+"</h2>";
+		dom.style.color ="red";
+	}, 1000);
+});
+</script>
+</body>
+</html>
