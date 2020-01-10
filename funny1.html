@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>시간정보 출력하기</h1>
+<hr>
+<button onclick="f1()">빨강색</button>
+<button onclick="f2()">초록색</button>
+<button onclick="f3()">주황색</button>
+<output></output>
+<script>
+var target = document.getElementsByTagName("output")[0];
+var setId;
+function f1() {
+	setId = window.setInterval(function(){
+		var d = new Date();
+		target.innerHTML = "<h2>"+d.toLocaleString()+"</h2>";
+		target.style.color ="red";
+	}, 1000);
+}
+
+function f2() {
+	setId = window.setInterval(function(){
+		var d = new Date();
+		target.innerHTML = "<h2>"+d.toLocaleString()+"</h2>";
+		target.style.color ="green";
+	}, 1000);
+}
+
+function f3() {
+	setId = window.setInterval(function(){
+		var d = new Date();
+		target.innerHTML = "<h2>"+d.toLocaleString()+"</h2>";
+		target.style.color ="orange";
+	}, 1000);
+}
+
+</script>
+</body>
+</html>
