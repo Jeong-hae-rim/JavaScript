@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>	
+	<h1>이미지 구현하기 1</h1>
+	<hr>
+	<button onclick="f1()">출력</button>
+	<button onclick="f2()">숨기기</button>
+	<output></output>
+
+	<script>
+	var img = document.getElementsByTagName("output")[0];
+
+    function f1(){
+    	img.innerHTML = "<img src= \"../images/totoro.png\" width=\"80%\">"
+    }
+    function f2(){
+    	img.innerHTML = "<img src= \"\">"
+    }
+	</script>
+</body>
+</html>

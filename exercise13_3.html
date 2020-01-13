@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>이미지 구현하기 3</h1>
+	<hr>
+	<button id="Open">출력</button>
+	<button id="Close">숨기기</button><br>
+	<output id="img"></output>
+	
+	<script>
+	var Open = document.getElementById("Open");
+	var Close = document.getElementById("Close");
+	
+	var img= document.getElementById("img");
+	var Opimg = function(){
+		img.innerHTML = "<img src= \"../images/totoro.png\" width=\"80%\">";
+		
+	}
+
+	var Himg = function(){
+		img.innerHTML = "<img src= \"\">"
+	}
+	
+	Open.addEventListener("click", Opimg);
+	Close.addEventListener("click", Himg);
+	</script>
+
+</body>
+</html>
