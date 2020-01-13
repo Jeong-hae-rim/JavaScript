@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+  <script>
+  
+    function initiate(){
+	  var elem=document.getElementById('canvas');
+	  var lineCap=['butt','butt','butt','butt','butt','butt','butt','butt','butt'];
+	  canvas=elem.getContext('2d');
+	  
+	  //첫번째 죄수
+	  
+	  canvas.beginPath();
+	  canvas.arc(50, 90, 30, "",Math.PI*1, false);
+	  canvas.strokeStyle = "black";
+	  canvas.stroke();
+	  
+	  canvas.beginPath();
+	  canvas.arc(150, 90, 30, "",Math.PI*1, false);
+	  canvas.strokeStyle = "black";
+	  canvas.stroke();
+		  
+	  canvas.beginPath();
+	  canvas.arc(100,100,50,0,Math.PI*2, false);
+	  canvas.fillStyle = "red";
+	  canvas.fill();
+	  
+	  canvas.beginPath();
+	  canvas.arc(100,100,50,0,Math.PI*2, false);
+	  canvas.strokeStyle = "black";
+	  canvas.stroke();
+	  
+	  canvas.beginPath();
+	  canvas.arc(80,100,15,0,Math.PI*2, false);
+	  canvas.strokeStyle = "black";
+	  canvas.stroke();
+	  canvas.fillStyle = "white";
+	  canvas.fill();
+	  
+	  canvas.beginPath();
+	  canvas.arc(80,100,10,0,Math.PI*2, false);
+	  canvas.fillStyle = "black";
+	  canvas.fill();
+	  
+	  canvas.beginPath();
+	  canvas.arc(120,100,15,0,Math.PI*2, false);
+	  canvas.strokeStyle = "black";
+	  canvas.stroke();
+	  canvas.fillStyle = "white";
+	  canvas.fill();
+	  
+	  canvas.beginPath();
+	  canvas.arc(120,100,10,0,Math.PI*2, false);
+	  canvas.fillStyle = "black";
+	  canvas.fill();
+	  
+	  canvas.beginPath();
+	  canvas.arc(100,140,20,0,Math.PI, true);
+	  canvas.fillStyle = "black";
+	  canvas.fill();
+	 
+	  
+
+      //2번째 죄수	  
+	  
+	  
+	  
+	  canvas.beginPath();
+	  canvas.arc(150, 90, 30, "",Math.PI*1, false);
+	  canvas.strokeStyle = "black";
+	  canvas.stroke();
+	  
+	  canvas.beginPath();
+	  canvas.arc(400, 90, 30, "",Math.PI*1, false);
+	  canvas.strokeStyle = "black";
+	  canvas.stroke();
+		  
+	  canvas.beginPath();
+	  canvas.arc(220,100,50,0,Math.PI*2, false);
+	  canvas.fillStyle = "yellow";
+	  canvas.fill();
+	  
+	  canvas.beginPath();
+	  canvas.arc(220,100,50,0,Math.PI*2, false);
+	  canvas.strokeStyle = "black";
+	  canvas.stroke();
+	  
+	  canvas.beginPath();
+	  canvas.arc(200,100,15,0,Math.PI*2, false);
+	  canvas.strokeStyle = "black";
+	  canvas.stroke();
+	  canvas.fillStyle = "white";
+	  canvas.fill();
+	  
+	  canvas.beginPath();
+	  canvas.arc(200,100,10,0,Math.PI*2, false);
+	  canvas.fillStyle = "black";
+	  canvas.fill();
+	  
+	  canvas.beginPath();
+	  canvas.arc(240,100,15,0,Math.PI*2, false);
+	  canvas.strokeStyle = "black";
+	  canvas.stroke();
+	  canvas.fillStyle = "white";
+	  canvas.fill();
+	  
+	  canvas.beginPath();
+	  canvas.arc(240,100,10,0,Math.PI*2, false);
+	  canvas.fillStyle = "black";
+	  canvas.fill();
+	  
+	  canvas.beginPath();
+	  canvas.arc(230,140,20,0,Math.PI, true);
+	  canvas.fillStyle = "black";
+	  canvas.fill();
+	  
+	  
+	  //3번째 죄수
+	  
+	  canvas.beginPath();
+	  canvas.arc(150, 90, 30, "",Math.PI*1, false);
+	  canvas.strokeStyle = "black";
+	  canvas.stroke();
+	  
+	  canvas.beginPath();
+	  canvas.arc(300, 90, 30, "",Math.PI*1, false);
+	  canvas.strokeStyle = "black";
+	  canvas.stroke();
+		  
+	  canvas.beginPath();
+	  canvas.arc(350,100,50,0,Math.PI*2, false);
+	  canvas.fillStyle = "green";
+	  canvas.fill();
+	  
+	  canvas.beginPath();
+	  canvas.arc(350,100,50,0,Math.PI*2, false);
+	  canvas.strokeStyle = "black";
+	  canvas.stroke();
+	  
+	  canvas.beginPath();
+	  canvas.arc(320,100,15,0,Math.PI*2, false);
+	  canvas.strokeStyle = "black";
+	  canvas.stroke();
+	  canvas.fillStyle = "white";
+	  canvas.fill();
+	  
+	  canvas.beginPath();
+	  canvas.arc(315,100,10,0,Math.PI*2, false);
+	  canvas.fillStyle = "black";
+	  canvas.fill();
+	  
+	  canvas.beginPath();
+	  canvas.arc(360,100,15,0,Math.PI*2, false);
+	  canvas.strokeStyle = "black";
+	  canvas.stroke();
+	  canvas.fillStyle = "white";
+	  canvas.fill();
+	  
+	  canvas.beginPath();
+	  canvas.arc(355,100,10,0,Math.PI*2, false);
+	  canvas.fillStyle = "black";
+	  canvas.fill();
+	  
+	  canvas.beginPath();
+	  canvas.arc(340,140,20,0,Math.PI, true);
+	  canvas.fillStyle = "black";
+	  canvas.fill();
+	 
+	  
+	  canvas.strokeStyle="black";
+	  for (var i=0;i<lineCap.length;i++) {
+		  canvas.lineWidth=10;
+		  canvas.lineCap=lineCap['butt'];
+		  canvas.beginPath();
+		  canvas.moveTo(25+50*i,10);
+		  canvas.lineTo(25+50*i,160);
+		  canvas.stroke();
+	  }
+	  
+	  
+	  
+	}
+	window.addEventListener("load", initiate, false);
+  </script>
+</head>
+<body>
+  <section id="canvasbox">
+    <canvas id="canvas" width="500" height="200" style="border:1px solid red;">
+      Your browser doesn't support the canvas element
+    </canvas>
+  </section>
+ 
+  
+</body>
+</html>
