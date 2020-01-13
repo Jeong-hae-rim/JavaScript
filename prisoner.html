@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>눈이 돌아간다</title>
+</head>
+<body>
+  <script>
+  var canvas;
+  function initiate(){
+	  var elem=document.getElementById('canvas');
+	  canvas=elem.getContext('2d');
+	  var imgObj = new Image();
+	  imgObj.src = "prisoner2.jpg";
+	  imgObj.onload = function() {
+
+		    // (50, 50) 지점에 원래 크기 그대로 이미지 그리기
+		    canvas.drawImage(imgObj, 50, 50, 500,200);
+	  }
+	  window.addEventListener('mousemove', animation, false);
+	}
+    function animation(e){
+		
+  	  //canvas.clearRect(0,0,300,500);
+  	  
+  	  // 죄수 1
+  	  var xmouse=e.clientX;
+  	  var ymouse=e.clientY;
+  	  var xcenter=120;
+  	  var ycenter=160;
+  	  var ang=Math.atan2(xmouse-xcenter,ymouse-ycenter);
+  	  var x=xcenter+Math.round(Math.sin(ang)*10);
+  	  var y=ycenter+Math.round(Math.cos(ang)*10);
+
+  	  canvas.beginPath();
+  	  canvas.arc(xcenter, ycenter,20,0,Math.PI*2, false);
+  	  canvas.moveTo(xcenter+77,ycenter+2);
+  	  canvas.arc(xcenter+57,ycenter+2,20,0,Math.PI*2, false);
+  	  canvas.stroke();
+  	  canvas.fillStyle="white";
+  	  canvas.fill();
+  	  
+  	  canvas.beginPath();
+  	  canvas.moveTo(x+10,y);
+  	  canvas.arc(x,y,10,0,Math.PI*2, false);
+  	  canvas.moveTo(x+67,y+2);
+  	  canvas.arc(x+57,y+2,10,0,Math.PI*2, false);
+  	  canvas.fillStyle="black";
+  	  canvas.fill();
+  	  
+  	  // 죄수 2
+  	 var xmouse=e.clientX;
+  	  var ymouse=e.clientY;
+  	  var xcenter=260;
+  	  var ycenter=160;
+  	  var ang=Math.atan2(xmouse-xcenter,ymouse-ycenter);
+  	  var x=xcenter+Math.round(Math.sin(ang)*10);
+  	  var y=ycenter+Math.round(Math.cos(ang)*10);
+
+  	  canvas.beginPath();
+  	  canvas.arc(xcenter, ycenter,20,0,Math.PI*2, false);
+  	  canvas.moveTo(xcenter+77,ycenter+2);
+  	  canvas.arc(xcenter+57,ycenter+2,20,0,Math.PI*2, false);
+  	  canvas.stroke();
+  	  canvas.fillStyle="white";
+  	  canvas.fill();
+  	  
+  	  canvas.beginPath();
+  	  canvas.moveTo(x+10,y);
+  	  canvas.arc(x,y,10,0,Math.PI*2, false);
+  	  canvas.moveTo(x+67,y+2);
+  	  canvas.arc(x+57,y+2,10,0,Math.PI*2, false);
+  	  canvas.fillStyle="black";
+  	  canvas.fill();
+  	  
+  	 // 죄수 3
+   	 var xmouse=e.clientX;
+   	  var ymouse=e.clientY;
+   	  var xcenter=400;
+   	  var ycenter=160;
+   	  var ang=Math.atan2(xmouse-xcenter,ymouse-ycenter);
+   	  var x=xcenter+Math.round(Math.sin(ang)*10);
+   	  var y=ycenter+Math.round(Math.cos(ang)*10);
+
+   	  canvas.beginPath();
+   	  canvas.arc(xcenter, ycenter,20,0,Math.PI*2, false);
+   	  canvas.moveTo(xcenter+77,ycenter+2);
+   	  canvas.arc(xcenter+57,ycenter+2,20,0,Math.PI*2, false);
+   	  canvas.stroke();
+   	  canvas.fillStyle="white";
+   	  canvas.fill();
+   	  
+   	  canvas.beginPath();
+   	  canvas.moveTo(x+10,y);
+   	  canvas.arc(x,y,10,0,Math.PI*2, false);
+   	  canvas.moveTo(x+67,y+2);
+   	  canvas.arc(x+57,y+2,10,0,Math.PI*2, false);
+   	  canvas.fillStyle="black";
+   	  canvas.fill();
+  	  
+  	 /*  canvas.beginPath();
+  	  canvas.arc(xcenter,ycenter,20,0,Math.PI*2, false);
+  	  canvas.moveTo(xcenter+70,150);
+  	  canvas.arc(xcenter+50,150,20,0,Math.PI*2, false);
+  	  canvas.stroke();
+
+  	  canvas.beginPath();
+  	  canvas.moveTo(x+10,y);
+  	  canvas.arc(x,y,10,0,Math.PI*2, false);
+  	  canvas.moveTo(x+60,y);ㄴ
+  	  canvas.arc(x+50,y,10,0,Math.PI*2, false);
+  	  canvas.fill(); */
+  	}
+	window.addEventListener("load", initiate, false);
+  </script>
+</head>
+<body>
+  <section id="canvasbox">
+    <canvas id="canvas" width="700" height="300">
+      Your browser doesn't support the canvas element
+    </canvas>
+  </section>
+</body>
+</html>
