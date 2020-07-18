@@ -12,14 +12,12 @@
 	<div id="result" class="show">(결과 값 표시)</div>
 
 	<script>
-		function calc() {
-			var currentYear = prompt("올해 연도를 입력해주세요.", "YYYY");
-			// cons currentYear = 2020;
-			var birthYear = prompt("태어난 연도를 입력해주세요.", "YYYY");
-			// let birthYear = prompt("태어난 연도를 입력해주세요.", "YYYY")
-			var age = currentYear - birthYear + 1;
-			//let age = currentYear - birthYear + 1;
-			document.querySelector("#result").innerHTML = "당신의 나이는 " + age + "세입니다.";
+		function calc(){
+			var currentYear = prompt("올해의 연도를 입력하세요.", 2020);
+			var birthYear = prompt("태어난 연도를 입력하세요.", 1990);
+			var age;
+			age = currentYear - birthYear + 1;
+			document.querySelector("#result").innerHTML = "당신의 나이는 " + age + "세 입니다.";
 		}
 	</script>
 </body>
