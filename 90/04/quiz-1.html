@@ -10,7 +10,16 @@
 	<h2>짝수일까, 홀수일까</h2>
 
 	<script>
-	
+		var number = prompt("숫자를 입력하세요");
+
+		if (number != null){
+			if(number % 2 == 0){
+				document.write(number + "는 짝수입니다.")
+			}
+			else if (number % 2 == 1){
+				document.write(number + "는 홀수입니다.");
+			}
+		}
 	</script>
 </body>
 </html>
