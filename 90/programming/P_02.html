@@ -36,22 +36,22 @@
                if(arr[i] == re_product){
                     count++;
                     //만일 배열의 인덱스 내의 값이 re_product(입력값)와 같다면?
-                    //카운팅 해주고
+                    //카운팅 해주고````
                }
             }
             
             //console.log(count);
-
+            
             if(0<count&&count<=9){
                 document.write(sid02 + "000" + count + "<br>");
             }
-            else if(9<count){
+            else if(9<count&&count<=99){
                 document.write(sid02 + "00" + count + "<br>");
             }
-            else if(99<count){
+            else if(99<count&&count<=999){
                 document.write(sid02 + "0" + count + "<br>");
             }
-            else if(999<count){
+            else{
                 document.write(sid02 + count + "<br>");
             }
 
