@@ -1,94 +1,68 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
         //입력 받는 값 : 점수
         //출력 값 : 등급과 평점
-        
+
         var array = [];
-        while(true){
+        while (true) {
             var point = prompt("전공과목 점수를 입력해주세요. :");
 
-            if(point==null){
+            if (point == null) {
                 break;
             }
 
             array.push(point);
 
         }
-        
+
+        var grades = {'A+': 4.5, 'A': 4.0, 'B+': 3.5, 'B': 3.0, 'C': 2.5, 'F': 0};
+        console.log(grades);
+
+
         var result = [];
-        for(i=0; i<array.length; i++){
-            //console.log(array[i]);
+        for (var i = 0; i < array.length; i++) {
+            if (array[i] >= 95) {
+                array[i] = grades["A+"];
+            }
+            else if (90 <= array[i] && array[i] <= 94) {
+                array[i] = grades["A"];
+            }
+            else if (85 <= array[i] && array[i] <= 89) {
+                array[i] = grades["B+"];
+            }
+            else if (80 <= array[i] && array[i] <= 84) {
+                array[i] = grades["B"];
+            }
+            else if (70 <= array[i] && array[i] <= 79) {
+                array[i] = grades["C"];
+            }
+            else {
+                array[i] = grades["F"];
+            }
 
-           if(array[i]>=95){
-                array[i] = "A+";
-                //console.log(array[i]);
-                //document.write("A+");
-           }
-           else if(90<=array[i] && array[i]<=94){
-                array[i] = "A";
-           }
-           else if(85<=array[i] && array[i]<=89){
-                array[i] = "B+";
-           }
-           else if(80<=array[i] && array[i]<=84){
-                array[i] = "B";
-           }
-           else if(70<=array[i] && array[i]<=79){
-                array[i] = "C";
-           }
-           else{
-                array[i] = "F";
-           }
-
-           result.push(array[i]);
+            result.push(array[i]);
         }
+
+        document.write("등급 : " +Object.keys(grades)+ "<br>");
+
+        var sum = 0;
+        for(var i = 0; i<result.length; i++){
+            sum += result[i];
+        }
+
+        var amount = sum / i;
         
-        document.write("등급 : " + result + "<br>");
-
-        var result2 = [];
-        for(i=0; i<result.length; i++){
-            if(result[i]=="A+"){
-                result[i] = 4.5;
-            }
-            else if(result[i]=="A"){
-                result[i] = 4.0;
-            }
-            else if(result[i]=="B+"){
-                result[i] = 3.5;
-            }
-            else if(result[i]=="B"){
-                result[i] = 3.0;
-            }
-            else if(result[i]=="C"){
-                result[i] = 2.5;
-            }
-            else{
-                result[i] = 0;
-            }
-
-            result2.push(result[i]);
-        }
-
-        //document.write("학점 : " + result2 + " ");
-
-        var sum = 0
-        var amount = 0;
-        for(i=0; i<result2.length; i++){
-            sum += result2[i];
-            
-            amount = sum/i;
-        }
-
-        //console.log(amount.toFixed(2));
-        document.write("평점 : " + amount.toFixed(2));
-
+        document.write("평점 평균 : " + amount.toFixed(2) + "점");
     </script>
 </body>
+
 </html>
