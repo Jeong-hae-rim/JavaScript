@@ -42,7 +42,18 @@
             
             //console.log(count);
 
-            document.write(sid02 + "000" + count + "<br>");
+            if(0<count&&count<=9){
+                document.write(sid02 + "000" + count + "<br>");
+            }
+            else if(9<count){
+                document.write(sid02 + "00" + count + "<br>");
+            }
+            else if(99<count){
+                document.write(sid02 + "0" + count + "<br>");
+            }
+            else if(999<count){
+                document.write(sid02 + count + "<br>");
+            }
 
         }
         
