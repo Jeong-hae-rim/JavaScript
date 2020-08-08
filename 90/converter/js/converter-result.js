@@ -7,7 +7,7 @@
 		
 		function exUnit() {
 			source.value = "";  // 왼쪽 텍스트 필드 값 지움
-			target.value = "";   // 오른쪽 텍스트 필드 값 지움
+			source.value = "";   // 오른쪽 텍스트 필드 값 지움
 			
 			if (cToF) {
 				cToF = false;  // 화씨 -> 섭씨 변환
