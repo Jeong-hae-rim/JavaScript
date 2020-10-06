@@ -1,5 +1,7 @@
 # The MVC Design Pattern in Vanilla JavaScript
 
+원문 : The MVC Design Pattern in Vanilla JavaScript (https://www.sitepoint.com/mvc-design-pattern-javascript/)
+
 ## 바닐라 자바스크립트에서의 MVC 패턴[^1]
 
 <img src="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/07/1499899730MVC_B-01.png">
